@@ -1,0 +1,658 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #00325C;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+header #flex-logo {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    gap: 1rem;
+}
+
+header #logo {
+    width: 200px;
+}
+
+header div ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header div ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+/* SUBHEADER */
+
+#subheader {
+    background-color: #0267ba;
+    animation: Background 10s infinite;
+}
+
+#subheader div {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    gap: 1rem;
+    padding: 1rem;
+    height: 20px;
+}
+
+#subheader p {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+@keyframes Background {
+    0% {
+        background-color: #004176;
+    }
+
+    50% {
+        background-color: #1e8ce7;
+    }
+
+    100% {
+        background-color: #004176;
+    }
+}
+
+
+
+/* HERO */
+
+#hero {
+    background-color: #00325C;
+    color: white;
+}
+
+#hero-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#hero-grid #hero-grid-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#hero-grid #hero-grid-info h1 {
+    font-size: 3.8rem;
+}
+
+#hero-grid #hero-grid-info p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+#hero-grid #hero-grid-info #hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+#hero-grid #hero-grid-info #hero-buttons a {
+    padding: 1rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    background-color: #1e8ce7;
+    border-radius: 0.2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+#hero-grid #hero-grid-info #hero-buttons a:hover {
+    padding: 1rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    background-color: #2d9af3;
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+#hero-image {
+    width: 600px;
+}
+
+
+/* INFOS SEI */
+
+#infos-sei {
+    margin-top: 4rem;
+    color: #00325C;
+}
+
+#infos-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+#infos-title h1 {
+    font-size: 2rem;
+}
+
+#infos-title p {
+    font-size: 1.2rem;
+}
+
+#infos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem;
+
+}
+
+#infos-grid .card {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    background-color: #fff;
+    padding: 2.2rem;
+    gap: 1rem;
+    min-height: 180px;
+
+}
+
+.card h1 {
+    font-size: 1.4rem;
+}
+
+.card p {
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+.card ul {
+    font-size: 1.1rem;
+    font-weight: 200;
+    list-style: circle;
+    margin-left: 1rem;
+}
+
+
+
+/* DOCUMENTOS */
+
+#documentos-sei {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem;
+    color: #00325C;
+    margin-top: 4rem;
+}
+
+#documentos-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+#documentos-title h1 {
+    font-size: 2rem;
+}
+
+#documentos-title p {
+    font-size: 1.2rem;
+    max-width: 720px;
+    text-align: center;
+}
+
+#documentos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+#documentos-grid img {
+    max-width: 100%;
+}
+
+
+/* DUVIDAS */
+
+#duvidas-sei {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: #bde2ff;
+    margin-top: 4rem;
+    font-size: 1.4rem;
+    text-align: center;
+    border-radius: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* AGENDA */
+
+#agenda-title {
+    color: #00325C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+#agenda-title h1 {
+    font-size: 2rem;
+}
+
+#agenda-title p {
+    font-size: 1.2rem;
+    max-width: 720px;
+    text-align: center;
+}
+
+#agenda-grid {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+    color: #00325C;
+}
+
+.card-agenda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+
+/* FAQ */
+
+
+
+#faq-title {
+    text-align: center;
+    color: #00325C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+#faq-title h1 {
+    font-size: 2rem;
+}
+
+#faq-title p {
+    font-size: 1.2rem;
+    max-width: 720px;
+    text-align: center;
+}
+
+#faq-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS PROPRIOS */
+
+.button-flex {
+    border: 3px solid #1e8ce7;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #4caeff;
+    transition: all 0.5s;
+}
+
+.button-flex:hover {
+    border: 3px solid #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.button-flex-sm {
+    border: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #00325C;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+
+
+
+/* ACCORDION */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #fff;
+    color: #00325C;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+    background-color: #fff;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 18px 18px;
+    background-color: #f7f7f7;
+    display: none;
+    overflow: hidden;
+}
+
+
+
+
+
+
+/* MEDIAS QUERIES */
+
+
+@media (max-width: 348px) {
+
+
+    header div ul {
+        display: none;
+    }
+
+    /* SUBHEADER */
+
+
+    #subheader {
+        display: none;
+    }
+
+
+    #hero-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    #hero-grid #hero-grid-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #hero-grid #hero-grid-info h1 {
+        font-size: 2rem;
+    }
+
+    #hero-grid #hero-grid-info p {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    #hero-image {
+        width: 300px;
+    }
+
+
+    /* infos */
+
+    #infos-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 1rem;
+        gap: 1rem;
+
+    }
+
+
+    /* DOCUMENTOS */
+
+
+    #documentos-title p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #documentos-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 1rem;
+        margin-top: 4rem;
+    }
+
+
+    /* AGENDA */
+
+    #agenda-grid {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        color: #00325C;
+    }
+
+
+
+    /* DUVIDAS */
+
+    #duvidas-sei {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 3rem;
+        background-color: #bde2ff;
+        margin-top: 4rem;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 1rem;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+     /* HEADER */
+
+    header div ul {
+        display: none;
+    }
+
+    /* SUBHEADER */
+
+
+    #subheader {
+        display: none;
+    }
+
+
+    #hero-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    #hero-grid #hero-grid-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #hero-grid #hero-grid-info h1 {
+        font-size: 2rem;
+    }
+
+    #hero-grid #hero-grid-info p {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    #hero-image {
+        width: 300px;
+    }
+
+
+    /* infos */
+
+    #infos-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 1rem;
+        gap: 1rem;
+
+    }
+
+
+    /* DOCUMENTOS */
+
+
+    #documentos-title p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #documentos-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 1rem;
+        margin-top: 4rem;
+    }
+
+
+    /* AGENDA */
+
+    #agenda-grid {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        color: #00325C;
+    }
+
+
+
+    /* DUVIDAS */
+
+    #duvidas-sei {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 3rem;
+        background-color: #bde2ff;
+        margin-top: 4rem;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 1rem;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
