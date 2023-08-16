@@ -376,6 +376,20 @@ header div ul li a {
     transition: all 0.5s;
 }
 
+.button-ava {
+    padding: 1rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    background-color: #1e8ce7;
+    border-radius: 0.2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+
 .button-flex:hover {
     border: 3px solid #fff;
     padding-left: 2rem;

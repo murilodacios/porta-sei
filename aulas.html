@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./aulas.css" />
+    <title>Portal de Aprendizado - SEI!</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div id="header">
+            <div id="flex-logo">
+                <img id="logo" src="/public/sei.png" alt="Logo AVA">
+                <p>Ambiente Virtual de Aprendizado</p>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="/index.html">Página Inicial</a>
+                    </li>
+                    <li>
+                        <a href="/index.html#documentos-sei">Manuais</a>
+                    </li>
+                    <li>
+                        <a href="/index.html#faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-player">
+
+        <div id="div-player">
+            <iframe id="player" width="720" height="404" src=""
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+            <p id="nome-aula">MÓDULO</p>
+            <div id="player-buttons">
+                <button onClick="voltarAula()">Voltar</button>
+                <button onClick="proximaAula()">Próxima</button>
+            </div>
+        </div>
+
+        <div id="div-aulas">
+            <h3>Aulas disponíveis</h3>
+            <ul id="lista-aulas">
+            </ul>
+        </div>
+
+    </section>
+
+
+
+
+    <script>
+
+
+        var aulas = [{
+            nome: "AULA 01 - Como acessar o sistema? E como é a tela inicial do SEI?",
+            link: "https://www.youtube.com/embed/f5xDwMZ8rWU"
+        }, {
+            nome: "AULA 02 - Menu controle de processos",
+            link: "https://www.youtube.com/embed/Dgj2Rnm1vtM"
+        },
+        , {
+            nome: "AULA 03 - Menu controle de processos",
+            link: "https://www.youtube.com/embed/NqVlyF51F_o"
+        }
+        , {
+            nome: "AULA 04 - Como elaborar um documento vinculado à um processo no SEI?",
+            link: "https://www.youtube.com/embed/vVFz8YuUfIY"
+        }
+        , {
+            nome: "AULA 05 - Como editar um documento?",
+            link: "https://www.youtube.com/embed/q-GGKRgw2PY"
+        }
+        , {
+            nome: "AULA 06 - Como assinar um documento?",
+            link: "https://www.youtube.com/embed/PBXogyYB2kE"
+        }
+        , {
+            nome: "AULA 07 - Como enviar um processo para outro setor?",
+            link: "https://www.youtube.com/embed/CxPQaLXbdSM"
+        }
+        , {
+            nome: "AULA 08 - Como usar a ferramenta de busca?",
+            link: "https://www.youtube.com/embed/YACR-eRP7RI"
+        }
+        , {
+            nome: "AULA 09 - Como consultar o andamento de um processo?",
+            link: "https://www.youtube.com/embed/GLpG-8CqbGw"
+        }
+        , {
+            nome: "AULA 10 - Como receber um processo?",
+            link: "https://www.youtube.com/embed/zKsIST9XQ_I"
+        }
+        , {
+            nome: "AULA 11 - Como incluir um documento externo no SEI?",
+            link: "https://www.youtube.com/embed/qWLOLDHwlhs"
+        }
+        , {
+            nome: "AULA 12 - Como excluir um documento no sistema?",
+            link: "https://www.youtube.com/embed/qsjkq7LkPK8"
+        }
+        , {
+            nome: "AULA 13 - É possível excluir um processo? Como eu faço?",
+            link: "https://www.youtube.com/embed/VGT0DZJFDEQ"
+        }
+        , {
+            nome: "AULA 14 - Como concluir um processo?",
+            link: "https://www.youtube.com/embed/7cyVvG8nslE"
+        }
+        , {
+            nome: "AULA 15 - Como reabrir processo no SEI",
+            link: "https://www.youtube.com/embed/iKP-tpSvB1I"
+        }
+        , {
+            nome: "AULA 16 - Como distribuir processos dentro de um setor?",
+            link: "https://www.youtube.com/embed/VNTL9DhOcVk"
+        }
+        , {
+            nome: "AULA 17 - Como disponibilizar textos utilizados com frequência?",
+            link: "https://www.youtube.com/embed/69_u54A6eVc"
+        }
+        , {
+            nome: "AULA 18 - Como salvar modelos de documentos no SEI?",
+            link: "https://www.youtube.com/embed/ebpe3zoWQ7I"
+        }
+        , {
+            nome: "AULA 19 - Como relacionar processos?",
+            link: "https://www.youtube.com/embed/ag3oWECOf_c"
+        }
+        , {
+            nome: "AULA 20 - Como anexar um processo a outro no SEI?",
+            link: "https://www.youtube.com/embed/6noHeZRdVyg"
+        }
+        , {
+            nome: "AULA 21 - Como inserir anotações em um processo?",
+            link: "https://www.youtube.com/embed/d-Ird8VzahY"
+        }
+        , {
+            nome: "AULA 22 - Como assinar documentos por usuários de setores diferentes	",
+            link: "https://www.youtube.com/embed/VNd37FZewSQ"
+        }
+        , {
+            nome: "AULA 23 - Como assinar documentos em um bloco de assinatura",
+            link: "https://www.youtube.com/embed/09jXhkuOyUg"
+        }
+        , {
+            nome: "AULA 24 - Como usar os estilos de formatação textual? ",
+            link: "https://www.youtube.com/embed/D57AejGXicQ"
+        }
+        , {
+            nome: "AULA 25 - Como gerenciar o uso dos marcadores no SEI?",
+            link: "https://www.youtube.com/embed/X5-_SFnn3bw"
+        }
+        , {
+            nome: "AULA 26 - Como acompanhar processos no SEI?",
+            link: "https://www.youtube.com/embed/fqAcn3En4RQ"
+        }
+
+        ]
+
+        var nomeaula = document.getElementById("nome-aula")
+        var playerSrc = document.getElementById("player")
+        var posAula = 0
+
+        function voltarAula() {
+
+            if (posAula == 0) {
+                return;
+            }
+
+            posAula = posAula - 1
+            nomeaula.innerHTML = aulas[posAula].nome
+            player.src = aulas[posAula].link
+        }
+
+        function proximaAula() {
+            if (posAula > aulas.length) {
+                posAula = 0
+            }
+
+            posAula = posAula + 1
+            nomeaula.innerHTML = aulas[posAula].nome
+            player.src = aulas[posAula].link
+        }
+
+        player.src = aulas[posAula].link
+        nomeaula.innerHTML = aulas[posAula].nome
+
+
+        var listaAulas = document.getElementById("lista-aulas")
+
+        aulas.map((aula, index) => {
+            var aulaLi = document.createElement("li");
+
+            aulaLi.innerText = aula.nome
+            aulaLi.setAttribute("id", index)
+            aulaLi.setAttribute("class", "aula-li")
+            aulaLi.setAttribute("onClick", `handleAlterAula(${index})`)
+            
+        
+            listaAulas.appendChild(aulaLi)
+        })
+
+        function handleAlterAula(index) {
+        
+            nomeaula.innerHTML = aulas[index].nome
+            player.src = aulas[index].link
+            posAula = index
+      
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
