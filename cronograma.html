@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cronograma de Implantação</title>
+   <link rel="stylesheet" href="cronograma.css">
+</head>
+<body>
+<table border="1">
+   <tr id="cabeçalho">
+      <th colspan="3">
+         <p>CRONOGRAMA DE IMPLANTAÇÃO</p>
+      </th>
+   </tr>
+    <tr class="fases">
+        <th data-inicio="2023-06-20" data-termino="2023-10-18">FASE 1</th>
+        <th>DATA INÍCIO: 20/06/2023</th>
+        <th>DATA TÉRMINO: 18/10/2023</th>
+    </tr>
+    <tr>
+      <td>
+         <p class="center"><strong>SECRETARIAS</strong></p>
+      </td>
+      <td colspan="2">
+         <p>Secretaria Municipal de Fazenda e Tecnologia</p>
+         <P>Controladoria Geral do Município</P>
+         <p>Procuradoria Geral do Município</p>
+         <p>Secretaria Municipal de Licitação e Compras</p>
+         <p>Secretaria Municipal de Governo</p>
+         <p>Gabinete do Prefeito</p>
+         <p>Ouvidoria</p>
+      </td>
+    </tr>
+    <tr class="fases">
+      <th data-inicio="2023-10-19" data-termino="2023-12-18">FASE 2</th>
+      <th>DATA INÍCIO: 19/10/2023</th>
+      <th>DATA TÉRMINO: 18/12/2023</th>
+  </tr>
+    <tr>
+        <td>
+         <p class="center"><strong>SECRETARIAS</strong></p>
+        </td>
+        <td colspan="2">
+         <p>Secretaria Municipal de Administração</p>
+         <p>ITAPREV</p>
+         <p>Secretaria Municial de Serviços Públicos</p>
+         <p>Secretaria Municipal de Obras</p>
+         <p>Secretaria Municipal de Cultura</p>
+         <p>Secretaria Municipal de Comunicaçaõ Social</p>
+         <p>Secretaria Municipal de Agricultura</p>
+         <p>Secretaria Municipal de Desenvolvimento Econômico</p>
+         <p>Secretaria Municipal de Trabalho e Renda</p>
+        </td>
+    </tr>
+    <tr class="fases">
+      <th data-inicio="2023-12-19" data-termino="2024-02-17">FASE 3</th>
+      <th>DATA INÍCIO: 19/12/2023</th>
+      <th>DATA TÉRMINO: 17/02/2024</th>
+    </tr>
+    <tr>
+      <td>
+         <p class="center"><strong>SECRETARIAS</strong></p>
+        </td>
+        <td colspan="2">
+         <p>Secretaria Municipal de Meio Ambiente e Urbanismo</p>
+         <p>Secretaria Municial de Desenvolvimento Social</p>
+         <p>Secretaria Municipal de Habitação e Serviços Sociais</p>
+         <p>Secretaria Municipal de Segurança</p>
+         <p>Secretaria Municipal de Transportes</p>
+         <p>Secretaria Municipal de Defesa Civíl</p>
+         <p>Secretaria Municipal de Turismo e Eventos</p>
+         <p>Secretaria Municipal de Esporte e Lazer</p>
+        </td>
+    </tr>
+    <tr class="fases">
+      <th data-inicio="2024-02-18" data-termino="2024-04-18">FASE 4</th>
+      <th>DATA INÍCIO: 18/02/2024</th>
+      <th>DATA TÉRMINO: 18/04/2024</th>
+    </tr>
+    <tr>
+      <td>
+         <p class="center"><strong>SECRETARIAS</strong></p>
+        </td>
+        <td colspan="2">
+         <p>Secretaria Municipal de Ciência e Inovação</p>
+         <p>Secretaria Municipal de Saúde</p>
+         <p>Secretaria Municipal de Educação</p>
+        </td>
+    </tr>
+</table>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+      
+       const dateHeaders = document.querySelectorAll("th[data-inicio][data-termino]");
+   
+      
+       dateHeaders.forEach(header => {
+           const dataInicioStr = header.getAttribute("data-inicio");
+           const dataTerminoStr = header.getAttribute("data-termino");
+           
+           const dataInicio = new Date(dataInicioStr);
+           const dataTermino = new Date(dataTerminoStr);
+           const hoje = new Date();
+   
+           if (hoje >= dataInicio && hoje <= dataTermino) {
+               header.textContent += " - Em Andamento";
+               header.style.color = "withe"; 
+
+           } else if (hoje > dataTermino) {
+               header.textContent += " - Finalizado";
+               header.style.color = "red"; 
+
+           } else {
+               header.textContent += " - Aguardando";
+               header.style.color = "withe"; 
+           }
+       });
+   });
+   </script>
+   
+   
+</body>
+</html>

@@ -1,0 +1,42 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "Inter", sans-serif;
+}
+
+:root {
+    --cor0: #2D9AF3;
+    --cor1: #00325C;
+    --cor2: #DF8637;
+    --cor3: #055b8cdd;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+}
+table {
+   border: 1px solid #000;
+   border-collapse: collapse;
+   width: 80%; 
+   margin: auto;
+}
+th, td {
+   border: 1px solid #000;
+   padding: 10px;
+}
+th {
+   text-align: center;
+}
+
+.center {
+   text-align: center;
+}
+
+.fases {
+   background-color: var(--cor1);
+   color: white;
+}
