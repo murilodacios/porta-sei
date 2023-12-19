@@ -30,6 +30,10 @@ header #flex-logo {
     gap: 1rem;
 }
 
+.red {
+    backgroud-color: #fb8500;
+}
+
 header #logo {
     width: 200px;
 }
